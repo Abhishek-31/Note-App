@@ -9,7 +9,7 @@ const getNotes=()=>
 
 const addNotes=(title,body)=>{
     const notes=loadNotes() 
-    // const DuplicateNote=notes.filter((note)=>note.title===title)
+    // const DuplicateNote=notes.filter((note)=>note.title===ti tle)
     const DuplicateNote=notes.find((item)=>item.title===title) // Difference between find and filter is that through find whenever that item is found, it breaks whereas in filter it checks for all the elements.
     debugger
     if(DuplicateNote)(console.log(chalk.red.inverse("Title already taken!")))
@@ -65,9 +65,9 @@ const a=loadNotes()
 for(i=0;i<a.length;i++)
 {
 if(a[i].title===title)
-{console.log("Your title was: "+a[i].title)    
-console.log("Your title's body was: "+a[i].body)
-break}
+    {console.log("Your title was: "+a[i].title)    
+    console.log("Your title's body was: "+a[i].body)
+    break}
 }
 }
 module.exports={
